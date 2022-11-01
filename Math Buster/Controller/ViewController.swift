@@ -18,9 +18,18 @@ class ViewController: UIViewController {
     @IBOutlet weak var submitButton: UIButton!
     @IBOutlet weak var restartButton: UIButton!
     
+    var timer: Timer?
+    var countDown:Int = 30
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        setupUI()
+        generateProblem()
+        scheduleTimer()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
     }
     
     func setupUI() {
@@ -28,5 +37,28 @@ class ViewController: UIViewController {
         
     }
 
+    func generateProblem() {
+        let firstDigit = Int.random(in: 0...9)
+        let secondDigit = Int.random(in: 0...9)
+        let arithmeticOperator:String = ["+", "-", "x", "/"].randomElement()!
+        
+        problemLabel.text = "\(firstDigit) \(arithmeticOperator) \(secondDigit) ="
+    }
+    
+    func scheduleTimer() {
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTimerUI), userInfo: nil, repeats: true)
+    }
+    
+    @objc
+    func updateTimerUI() {
+        countDown -= 1
+        
+        timerLabel.text = "00 : \(countDown)"
+        progressView.progress = Float(30 - countDown) / 30
+        
+        if countDown <= 0 {
+            timer?.invalidate()
+        }
+    }
 }
 
