@@ -1,0 +1,45 @@
+
+/* Class = "UILabel"; text = "Score: 0"; ObjectID = "Bj6-bX-6ih"; */
+"Bj6-bX-6ih.text" = "Score: 0";
+
+/* Class = "UILabel"; text = "00 : 30"; ObjectID = "DqG-O8-zhc"; */
+"DqG-O8-zhc.text" = "00 : 30";
+
+/* Class = "UITextField"; placeholder = "result"; ObjectID = "EzX-DB-48P"; */
+"EzX-DB-48P.placeholder" = "result";
+
+/* Class = "UIButton"; configuration.title = "Restart"; ObjectID = "NjC-Gw-kOv"; */
+"NjC-Gw-kOv.configuration.title" = "Restart";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "NjC-Gw-kOv"; */
+"NjC-Gw-kOv.normalTitle" = "Button";
+
+/* Class = "UISegmentedControl"; aTr-ai-PHq.segmentTitles[0] = "Easy"; ObjectID = "aTr-ai-PHq"; */
+"aTr-ai-PHq.segmentTitles[0]" = "Easy";
+
+/* Class = "UISegmentedControl"; aTr-ai-PHq.segmentTitles[1] = "Medium"; ObjectID = "aTr-ai-PHq"; */
+"aTr-ai-PHq.segmentTitles[1]" = "Medium";
+
+/* Class = "UISegmentedControl"; aTr-ai-PHq.segmentTitles[2] = "Hard"; ObjectID = "aTr-ai-PHq"; */
+"aTr-ai-PHq.segmentTitles[2]" = "Hard";
+
+/* Class = "UIButton"; configuration.title = "Start"; ObjectID = "bAL-FY-LO0"; */
+"bAL-FY-LO0.configuration.title" = "Start";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "bAL-FY-LO0"; */
+"bAL-FY-LO0.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "6 x 10 ="; ObjectID = "d8j-E8-RLJ"; */
+"d8j-E8-RLJ.text" = "6 x 10 =";
+
+/* Class = "UIButton"; configuration.title = "Submit"; ObjectID = "dEn-Rn-eHt"; */
+"dEn-Rn-eHt.configuration.title" = "Submit";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "dEn-Rn-eHt"; */
+"dEn-Rn-eHt.normalTitle" = "Button";
+
+/* Class = "UINavigationItem"; title = "Welcome!"; ObjectID = "dla-KB-wEz"; */
+"dla-KB-wEz.title" = "Welcome!";
+
+/* Class = "UINavigationItem"; title = "Math Buster"; ObjectID = "eJB-CD-bp8"; */
+"eJB-CD-bp8.title" = "Math Buster";
