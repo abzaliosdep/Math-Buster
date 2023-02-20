@@ -25,7 +25,10 @@ class ViewController: UIViewController {
     var score:Int = 0
     let ranges = [0...9, 10...99, 100...999]
     var scoreAmount = [1, 2, 3]
+    
     var navigationBarPreviousTintColor: UIColor?
+    
+    static let userScoreArray: String = "userScore"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -105,9 +108,7 @@ class ViewController: UIViewController {
         progressView.progress = Float(30 - countDown) / 30
         
         if countDown <= 0 {
-            timer?.invalidate()
-            resultField.isEnabled = false
-            submitButton.isEnabled = false
+            finishGame()
 
         }
     }
@@ -155,6 +156,54 @@ class ViewController: UIViewController {
     
     @IBAction func segmentedControlValueChanged(_ sender: Any) {
         restart()
+    }
+    
+    func finishGame() {
+        timer?.invalidate()
+        resultField.isEnabled = false
+        submitButton.isEnabled = false
+        
+        askForName()
+    }
+    
+    func askForName() {
+        let alertController = UIAlertController(title: "Game is Over!", message: "Save your score: \(score)", preferredStyle: .alert)
+        alertController.addTextField { textField in
+            textField.placeholder = "Enter your name"
+        }
+        
+        let saveAction = UIAlertAction(title: "Save", style: .default) { _ in
+            guard let textField = alertController.textFields?.first else {
+                print("Textfield is absent")
+                return
+            }
+            guard let text = textField.text, !text.isEmpty else {
+                print("Text is nil or empty")
+                return
+            }
+            print("Name: \(text)")
+            self.saveUserScore(name: text)
+        }
+        alertController.addAction(saveAction)
+        
+        let canselAction = UIAlertAction(title: "Cansel", style: .cancel)
+        alertController.addAction(canselAction)
+        
+        present(alertController, animated: true)
+    }
+    
+    func saveUserScore(name: String) {
+        let userScore: [String: Any] = ["name": name, "score": score]
+        let userScoreArray: [[String: Any]] = getUserScoreArray() + [userScore]
+        
+        let userDefaults = UserDefaults.standard
+        userDefaults.set(userScoreArray, forKey: ViewController.userScoreArray)
+    }
+    
+    func getUserScoreArray() -> [[String: Any]] {
+        let userDefaults = UserDefaults.standard
+        let array = userDefaults.array(forKey: ViewController.userScoreArray) as? [[String: Any]]
+        return array ?? []
     }
 }
 
