@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		1D20751D299FB4E5005FE71C /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D20751C299FB4E5005FE71C /* WelcomeViewController.swift */; };
+		1D5087CE29AB6B8A00F537F4 /* ScoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5087CC29AB6B8A00F537F4 /* ScoreTableViewCell.swift */; };
+		1D5087CF29AB6B8A00F537F4 /* ScoreTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D5087CD29AB6B8A00F537F4 /* ScoreTableViewCell.xib */; };
+		1D9BCE5929B87EB600313CB2 /* ScoreDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9BCE5729B87EB600313CB2 /* ScoreDetailViewController.swift */; };
+		1D9BCE5A29B87EB600313CB2 /* ScoreDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D9BCE5829B87EB600313CB2 /* ScoreDetailViewController.xib */; };
 		1DFCAF3D290FBB4F00AAD12B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFCAF3C290FBB4F00AAD12B /* AppDelegate.swift */; };
 		1DFCAF3F290FBB4F00AAD12B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFCAF3E290FBB4F00AAD12B /* SceneDelegate.swift */; };
 		1DFCAF41290FBB4F00AAD12B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFCAF40290FBB4F00AAD12B /* ViewController.swift */; };
@@ -18,6 +22,10 @@
 
 /* Begin PBXFileReference section */
 		1D20751C299FB4E5005FE71C /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		1D5087CC29AB6B8A00F537F4 /* ScoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreTableViewCell.swift; sourceTree = "<group>"; };
+		1D5087CD29AB6B8A00F537F4 /* ScoreTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScoreTableViewCell.xib; sourceTree = "<group>"; };
+		1D9BCE5729B87EB600313CB2 /* ScoreDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreDetailViewController.swift; sourceTree = "<group>"; };
+		1D9BCE5829B87EB600313CB2 /* ScoreDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScoreDetailViewController.xib; sourceTree = "<group>"; };
 		1DFCAF39290FBB4F00AAD12B /* Math Buster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Math Buster.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DFCAF3C290FBB4F00AAD12B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1DFCAF3E290FBB4F00AAD12B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +47,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D5087CB29AB6B5A00F537F4 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				1D5087CC29AB6B8A00F537F4 /* ScoreTableViewCell.swift */,
+				1D5087CD29AB6B8A00F537F4 /* ScoreTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		1DFCAF30290FBB4E00AAD12B = {
 			isa = PBXGroup;
 			children = (
@@ -79,9 +96,12 @@
 		1DFCAF51290FBCBC00AAD12B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1D5087CB29AB6B5A00F537F4 /* Cell */,
 				1DFCAF40290FBB4F00AAD12B /* ViewController.swift */,
 				1D20751C299FB4E5005FE71C /* WelcomeViewController.swift */,
 				1DFCAF42290FBB4F00AAD12B /* Main.storyboard */,
+				1D9BCE5729B87EB600313CB2 /* ScoreDetailViewController.swift */,
+				1D9BCE5829B87EB600313CB2 /* ScoreDetailViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -154,6 +174,8 @@
 			files = (
 				1DFCAF49290FBB5600AAD12B /* LaunchScreen.storyboard in Resources */,
 				1DFCAF46290FBB5600AAD12B /* Assets.xcassets in Resources */,
+				1D5087CF29AB6B8A00F537F4 /* ScoreTableViewCell.xib in Resources */,
+				1D9BCE5A29B87EB600313CB2 /* ScoreDetailViewController.xib in Resources */,
 				1DFCAF44290FBB4F00AAD12B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -165,6 +187,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D9BCE5929B87EB600313CB2 /* ScoreDetailViewController.swift in Sources */,
+				1D5087CE29AB6B8A00F537F4 /* ScoreTableViewCell.swift in Sources */,
 				1DFCAF41290FBB4F00AAD12B /* ViewController.swift in Sources */,
 				1D20751D299FB4E5005FE71C /* WelcomeViewController.swift in Sources */,
 				1DFCAF3D290FBB4F00AAD12B /* AppDelegate.swift in Sources */,
